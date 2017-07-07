@@ -15,7 +15,7 @@ ZSH_THEME="agnoster"
 # HYPHEN_INSENSITIVE="true"
 
 # Uncomment the following line to disable bi-weekly auto-update checks.
-DISABLE_AUTO_UPDATE="true"
+# DISABLE_AUTO_UPDATE="true"
 
 # Uncomment the following line to change how often to auto-update (in days).
 export UPDATE_ZSH_DAYS=3
@@ -27,7 +27,7 @@ export UPDATE_ZSH_DAYS=3
 # DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
-# ENABLE_CORRECTION="true"
+ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 # COMPLETION_WAITING_DOTS="true"
@@ -49,23 +49,18 @@ export UPDATE_ZSH_DAYS=3
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git web-search osx catimg sudo vscode go)
-
-# User configuration
-# go env configuration
-export GOPATH=/usr/local/Cellar/go/1.7.1
-export GOBIN=$GOPATH/bin
-export PATH=$PATH:$GOBIN
+plugins=(git web-search autojump osx sudo vscode go encode64)
 
 #export PATH="/usr/bin:/bin:/usr/sbin:/sbin:$PATH"
 export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
+export MANPATH="/usr/local/man:$MANPATH"
 
-# export MANPATH="/usr/local/man:$MANPATH"
+# User configuration
 
 source $ZSH/oh-my-zsh.sh
 
 # You may need to manually set your language environment
-# export LANG=en_US.UTF-8
+export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
@@ -78,7 +73,7 @@ source $ZSH/oh-my-zsh.sh
 # export ARCHFLAGS="-arch x86_64"
 
 # ssh
-export SSH_KEY_PATH="~/.ssh/dsa_id"
+# export SSH_KEY_PATH="~/.ssh/dsa_id"
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
@@ -91,10 +86,9 @@ alias zshconfig="vs ~/.zshrc"
 alias ohmyzsh="vs ~/.oh-my-zsh"
 alias code='vs /Users/Amor/code'
 alias weather="curl -4 http://wttr.in/Shanghai"
-
-#echo
-#archey
-#echo
+# echo
+# archey
+# echo
 echo
 echo "=============== Quote Of The Day ==============="
 echo
@@ -104,3 +98,10 @@ echo "================================================"
 echo
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 export PATH="/usr/local/sbin:$PATH"
+# go env configuration
+export GOPATH=/usr/local/Cellar/go/1.8.3
+export GOBIN=$GOPATH/bin
+export PATH=$PATH:$GOBIN
+export ANDROID_HOME=/usr/local/opt/android-sdk
+export VULTR_API_KEY=2GF7WWRYXQFKNLFHDSSOETVSUBESOHB6G5IQ 
+export PATH="/usr/local/opt/curl/bin:$PATH"
