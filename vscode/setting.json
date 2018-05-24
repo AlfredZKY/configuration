@@ -2,8 +2,7 @@
 {
     "workbench.colorCustomizations": {
         "activityBar.foreground": "#ee6e73",
-        "activityBarBadge.background": "#f44336",
-        "titleBar.activeBackground": "#00695c"
+        "activityBarBadge.background": "#f44336"
     },
     // Editor 
     // 控制字体系列。
@@ -23,31 +22,87 @@
     // 启用要发送给 Microsoft 的故障报表。
     // 此选项需重启才可生效。
     "telemetry.enableCrashReporter": false,
-    // Go configuration
-    // Autocomplete members from unimported packages.
-    // "go.autocompleteUnimportedPackages": true,
     "window.zoomLevel": 0,
     "terminal.integrated.fontSize": 16,
     "window.titleBarStyle": "custom",
-    "projectManager.vscode.baseFolders": [
-        "$home/code"
-    ],
     "workbench.iconTheme": "material-icon-theme",
     "editor.minimap.enabled": true,
-    "projectManager.git.ignoredFolders": [
-        ".vscode",
-        "node_modules",
-        "out",
-        "typings",
-        "test"
-    ],
     "grunt.autoDetect": "off",
-    "gulp.autoDetect": "off",
-    "emmet.useNewEmmet": false,
     "terminal.integrated.shell.osx": "zsh",
+    "emmet.includeLanguages": {
+        "vue-html": "html",
+        "vue": "html"
+    },
     "emmet.syntaxProfiles": {
         "vue-html": "html",
         "vue": "html"
     },
-    "vetur.validation.template": false
+    "vetur.validation.template": false,
+    "workbench.sideBar.location": "left",
+    "editor.minimap.showSlider": "always",
+    "go.autocompleteUnimportedPackages": true,
+    "go.useCodeSnippetsOnFunctionSuggest": true,
+    "editor.quickSuggestions": {
+        "strings": true
+    },
+    "element-helper.version": "2.3",
+    "extensions.ignoreRecommendations": true,
+    "emmet.triggerExpansionOnTab": true,
+    "material-icon-theme.showUpdateMessage": false,
+    "java.errors.incompleteClasspath.severity": "ignore",
+    "python.disablePromptForFeatures": [
+        "pylint"
+    ],
+    "workbench.editor.swipeToNavigate": true,
+    "[javascript]": {
+        
+    },
+    "go.addTags": {
+        "tags": "bson,json",
+        "options": "",
+        "promptForTags": false,
+        "transform": "snakecase"
+    },
+    "go.editorContextMenuCommands": {
+        "toggleTestFile": false,
+        "addTags": true,
+        "removeTags": true,
+        "testAtCursor": false,
+        "testFile": false,
+        "testPackage": false,
+        "generateTestForFunction": true,
+        "generateTestForFile": true,
+        "generateTestForPackage": true,
+        "addImport": true,
+        "testCoverage": false,
+        "playground": false
+    },
+    "git.enableSmartCommit": true,
+    "workbench.startupEditor": "newUntitledFile",
+    "prettier.trailingComma": "es5",
+    "beautify.language": {
+        "js": {
+            "type": [
+                "javascript",
+                "json"
+            ],
+            "filename": [
+                ".jshintrc",
+                ".jsbeautify"
+            ]
+        },
+        "css": [
+            "css",
+            "scss"
+        ],
+        "html": [
+            "htm",
+            "html",
+            "vue"
+        ]
+    },
+    "vetur.format.defaultFormatter.html": "js-beautify-html",
+    "python.linting.pylintArgs": [
+        "--load-plugins=pylint_django"
+    ],
 }
