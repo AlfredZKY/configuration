@@ -25,7 +25,6 @@
     "window.zoomLevel": 0,
     "terminal.integrated.fontSize": 16,
     "window.titleBarStyle": "custom",
-    "workbench.iconTheme": "material-icon-theme",
     "editor.minimap.enabled": true,
     "grunt.autoDetect": "off",
     "terminal.integrated.shell.osx": "zsh",
@@ -45,14 +44,9 @@
     "editor.quickSuggestions": {
         "strings": true
     },
-    "element-helper.version": "2.3",
     "extensions.ignoreRecommendations": true,
     "emmet.triggerExpansionOnTab": true,
     "material-icon-theme.showUpdateMessage": false,
-    "java.errors.incompleteClasspath.severity": "ignore",
-    "python.disablePromptForFeatures": [
-        "pylint"
-    ],
     "workbench.editor.swipeToNavigate": true,
     "[javascript]": {
         
@@ -60,7 +54,7 @@
     "go.addTags": {
         "tags": "bson,json",
         "options": "",
-        "promptForTags": false,
+        "promptForTags": true,
         "transform": "snakecase"
     },
     "go.editorContextMenuCommands": {
@@ -75,34 +69,24 @@
         "generateTestForPackage": true,
         "addImport": true,
         "testCoverage": false,
-        "playground": false
+        "playground": true
     },
     "git.enableSmartCommit": true,
     "workbench.startupEditor": "newUntitledFile",
-    "prettier.trailingComma": "es5",
-    "beautify.language": {
-        "js": {
-            "type": [
-                "javascript",
-                "json"
-            ],
-            "filename": [
-                ".jshintrc",
-                ".jsbeautify"
-            ]
-        },
-        "css": [
-            "css",
-            "scss"
-        ],
-        "html": [
-            "htm",
-            "html",
-            "vue"
-        ]
-    },
     "vetur.format.defaultFormatter.html": "js-beautify-html",
     "python.linting.pylintArgs": [
         "--load-plugins=pylint_django"
     ],
+    "go.gotoSymbol.includeGoroot": true,
+    "go.inferGopath": true,
+    "workbench.statusBar.feedback.visible": false,
+    "workbench.settings.editor": "json",
+    "python.linting.flake8Enabled": true,
+    "python.pythonPath": "/usr/local/anaconda3/bin/python",
+    "python.linting.flake8Args": [
+        "--max-line-length=120",
+        "--ignore=E501",
+    ],
+    "workbench.iconTheme": "material-icon-theme",
+    "javascript.validate.enable": false
 }
