@@ -8,7 +8,7 @@ export ZSH="/Users/amor/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="agnoster"
+ZSH_THEME="robbyrussell"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -62,7 +62,7 @@ ENABLE_CORRECTION="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git z vscode sudo)
+plugins=(git z vscode sudo docker docker-compose docker-machine catimg yarn)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -98,16 +98,36 @@ export SSH_KEY_PATH="~/.ssh/rsa_id"
 alias zshconfig="code ~/.zshrc"
 alias ohmyzsh="code ~/.oh-my-zsh"
 alias ip="curl -i http://ip.taobao.com/service/getIpInfo.php\?ip\=myip"
+alias ips="ifconfig -a | perl -nle'/(\d+\.\d+\.\d+\.\d+)/ && print $1'"
 alias setproxy="export http_proxy=http://127.0.0.1:1080 && export https_proxy=http://127.0.0.1:1080 && ip"
 alias unsetproxy="unset http_proxy && unset https_proxy && ip"
 # added by travis gem
 [ -f /Users/amor/.travis/travis.sh ] && source /Users/amor/.travis/travis.sh
 
+# golang
 export GOPATH="/Users/amor/go"
+export GO111MODULE=on
+
+# electron
 export ELECTRON_MIRROR="https://npm.taobao.org/mirrors/electron/"
+export SASS_BINARY_SITE="https://npm.taobao.org/mirrors/node-sass"
 export PATH="$GOPATH/bin:$PATH"
-export PATH=/usr/local/anaconda3/bin:"$PATH"
+export PATH=/usr/local/anaconda3/bin:/usr/local/flutter/bin:$HOME/.deno/bin:$HOME/.cargo/bin::"$PATH"
 export ETCDCTL_API=3
-# tabtab source for electron-forge package
-# uninstall by removing these lines or running `tabtab uninstall electron-forge`
-# [[ -f /Users/amor/Documents/code/github/installer/node_modules/tabtab/.completions/electron-forge.zsh ]] && . /Users/amor/Documents/code/github/installer/node_modules/tabtab/.completions/electron-forge.zsh
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+export PATH="/usr/local/sbin:$PATH"
+export PUB_HOSTED_URL="https://pub.flutter-io.cn"
+export FLUTTER_STORAGE_BASE_URL="https://storage.flutter-io.cn"
+
+# node 10
+export PATH="/usr/local/opt/node@10/bin:$PATH"
+export LDFLAGS="-L/usr/local/opt/node@10/lib"
+export CPPFLAGS="-I/usr/local/opt/node@10/include"
+
+export GITHUB_TOKEN="****"
+export GITHUB_USERNAME="amorist"
+
+# auto complete
+autoload -Uz compinit && compinit -i
