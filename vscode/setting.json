@@ -6,11 +6,12 @@
     },
     // Editor 
     // 控制字体系列。
-    "editor.fontFamily": "Meslo LG M for Powerline",
+    "editor.fontFamily": "mononoki",
     // 控制字体粗细。
     "editor.fontWeight": "normal",
     // 控制字体大小。
-    "editor.fontSize": 16,
+    "editor.fontSize": 18,
+
     // Terminal    
     // 自定义要在 OS X 上运行的终端应用程序。
     "terminal.external.osxExec": "iTerm.app",
@@ -23,7 +24,7 @@
     // 此选项需重启才可生效。
     "telemetry.enableCrashReporter": false,
     "window.zoomLevel": 0,
-    "terminal.integrated.fontSize": 16,
+    "terminal.integrated.fontSize": 18,
     "window.titleBarStyle": "custom",
     "editor.minimap.enabled": true,
     "grunt.autoDetect": "off",
@@ -39,7 +40,9 @@
     "vetur.validation.template": false,
     "workbench.sideBar.location": "left",
     "editor.minimap.showSlider": "always",
-    "go.autocompleteUnimportedPackages": true,
+    "go.alternateTools": {
+        "go-langserver": "gopls"
+    },
     "go.useCodeSnippetsOnFunctionSuggest": true,
     "editor.quickSuggestions": {
         "strings": true
@@ -49,12 +52,13 @@
     "material-icon-theme.showUpdateMessage": false,
     "workbench.editor.swipeToNavigate": true,
     "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
         
     },
     "go.addTags": {
         "tags": "bson,json",
         "options": "",
-        "promptForTags": true,
+        "promptForTags": false,
         "transform": "snakecase"
     },
     "go.editorContextMenuCommands": {
@@ -80,7 +84,6 @@
     "go.gotoSymbol.includeGoroot": true,
     "go.inferGopath": true,
     "workbench.statusBar.feedback.visible": false,
-    "workbench.settings.editor": "json",
     "python.linting.flake8Enabled": true,
     "python.pythonPath": "/usr/local/anaconda3/bin/python",
     "python.linting.flake8Args": [
@@ -88,5 +91,41 @@
         "--ignore=E501",
     ],
     "workbench.iconTheme": "material-icon-theme",
-    "javascript.validate.enable": false
+    "javascript.validate.enable": false,
+    "workbench.activityBar.visible": true,
+    "editor.fontLigatures": true,
+    "workbench.settings.editor": "json",
+    "files.associations": {
+        "*.wpy": "vue"
+    },
+    "go.autocompleteUnimportedPackages": true,
+    "go.useLanguageServer": false,
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "python.jediEnabled": false,
+    "sync.gist": "18766fbe2c94b44a31b008f01d39b293",
+    "sync.autoUpload": true,
+    "sync.quietSync": true,
+    "search.exclude": {
+        "node_modules": true
+    },
+    "terminal.integrated.copyOnSelection": true,
+    "terminal.integrated.cursorBlinking": true,
+    "terminal.integrated.rendererType": "dom",
+    "[html]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[css]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "go.formatTool": "goimports",
+    "[markdown]": {
+        "editor.defaultFormatter": "TomasHubelbauer.vscode-markdown-table-format"
+    },
+    "[yaml]": {
+        "editor.defaultFormatter": "redhat.vscode-yaml"
+    }
 }
